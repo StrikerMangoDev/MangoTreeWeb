@@ -1,0 +1,328 @@
+<!-- Main Navigation -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a routerLink="/home">
+                <img src="assets/img/logo.png" alt="Company Logo">
+            </a>
+        </div>
+        <!-- New Central Navigation for Desktop -->
+        <ul class="desktop-nav-links">
+            <li><a routerLink="/services" routerLinkActive="active">Services</a></li> 
+            <li><a routerLink="/industries" routerLinkActive="active">Industry We Serve</a></li>
+            <li><a routerLink="/tech-stack" routerLinkActive="active">Tech Stack</a></li>
+            <li><a routerLink="/social-proof" routerLinkActive="active">Social Proof</a></li>
+        </ul>
+        <div class="header-right-controls">
+            <a routerLink="/contact"><button class="contact-us-btn">Contact Us</button></a>
+            <button class="hamburger-menu-toggle" id="hamburgerIcon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- Slide-Out Off-Canvas Menu -->
+<div class="offcanvas-menu">
+    <button class="offcanvas-close-btn">
+        <i class="fas fa-times"></i>
+    </button>
+    <ul class="offcanvas-nav-links">
+        <li><a routerLink="/home">Home</a></li>
+        
+        <!-- Solutions Dropdown -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                Solutions
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="offcanvas-dropdown">
+                <li><a href="#">IT Consulting</a></li>
+                <li><a href="#">Digital Transformation</a></li>
+                <li><a href="#">Cloud Solutions</a></li>
+                <li><a href="#">Custom Software</a></li>
+            </ul>
+        </li>
+
+        <!-- Companies Dropdown -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                Companies
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="offcanvas-dropdown">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Partners</a></li>
+            </ul>
+        </li>
+
+        <!-- Case Studies Dropdown -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                Case Studies
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="offcanvas-dropdown">
+                <li><a href="#">Success Stories</a></li>
+                <li><a href="#">Client Projects</a></li>
+                <li><a href="#">Industry Solutions</a></li>
+            </ul>
+        </li>
+
+        <!-- Blog Dropdown -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                Blog
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="offcanvas-dropdown">
+                <li><a href="#">Latest Posts</a></li>
+                <li><a href="#">Tech Insights</a></li>
+                <li><a href="#">Industry News</a></li>
+            </ul>
+        </li>
+
+        <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+</div>
+<div class="offcanvas-overlay"></div>
+
+<!-- Main content starts after header and offcanvas menu -->
+<main class="home-content-wrapper">
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Empower Your Business with Expert IT Management</h1>
+            <p>We provide cutting-edge IT solutions to streamline your operations, boost productivity, and fuel your business growth. Let us handle the technology, so you can focus on what you do best.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Schedule a Free Consultation</button>
+                <button class="btn btn-secondary">Learn More About Us</button>
+            </div>
+        </div>
+        <div class="hero-images-slider">
+            <img src="assets/img/download.jpg" alt="IT Management Concept 1" class="hero-slide active">
+            <img src="assets/img/download (1).jpg" alt="Business Growth Technology" class="hero-slide">
+            <img src="assets/img/download (2).jpg" alt="Team Collaboration IT" class="hero-slide">
+            <img src="assets/img/download (3).jpg" alt="IT Solutions" class="hero-slide">
+        </div>
+    </section>
+
+    <section class="what-we-do-section">
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-subtitle">Tailored IT management services to keep your business ahead.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Managed IT Services</h3>
+                <p>Proactive monitoring, maintenance, and support for your entire IT infrastructure, ensuring reliability and performance.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Cybersecurity Solutions</h3>
+                <p>Protect your valuable data and systems with our comprehensive security strategies and advanced threat detection.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <h3>Cloud Computing</h3>
+                <p>Leverage the power of the cloud for scalability, flexibility, and cost-efficiency with our expert cloud services.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-headset"></i></div>
+                <h3>IT Consulting & Strategy</h3>
+                <p>Align your technology with your business goals through strategic IT consulting and roadmap development.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Network Infrastructure</h3>
+                <p>Design, implement, and manage robust network solutions for seamless connectivity and communication.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-database"></i></div>
+                <h3>Data Backup & Recovery</h3>
+                <p>Ensure business continuity with secure data backup solutions and rapid disaster recovery plans.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule-meeting-section" id="schedule-form">
+        <h2 class="section-title">Schedule a Consultation</h2>
+        <p class="section-subtitle">Let's discuss how our IT solutions can help your business thrive. Fill out the form below, and we'll be in touch shortly.</p>
+        <form class="meeting-form" id="meetingForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyName">Company Name (Optional)</label>
+                    <input type="text" id="companyName" name="companyName" placeholder="Your company name">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                </div>
+                <div class="form-group form-group-full">
+                    <label for="preferredDate">Preferred Date & Time (Optional)</label>
+                    <input type="datetime-local" id="preferredDate" name="preferredDate">
+                </div>
+                <div class="form-group form-group-full">
+                    <label for="message">Your Message / Requirements</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about your needs or questions..." required></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit-form">Send Request</button>
+            <div id="form-submission-message" class="form-message"></div>
+        </form>
+    </section>
+
+    <section class="success-stories-section">
+        <div class="success-stories-inner-container">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">Discover how we've helped businesses like yours achieve their IT goals.</p>
+            <div class="stories-slider-container">
+                <div class="story-slide active">
+                    <img src="assets/img/download (3).jpg" alt="Client Success Story Image 1" class="story-image">
+                    <div class="story-content">
+                        <h4>Streamlined Operations for TechCorp</h4>
+                        <p>"The team at Mango Tree Technology transformed our IT infrastructure, resulting in a 40% increase in operational efficiency."</p>
+                        <div class="story-author">
+                            <span>John Smith</span>
+                            <span>CTO, TechCorp</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-slide">
+                    <img src="assets/img/download (2).jpg" alt="Client Success Story Image 2" class="story-image">
+                    <div class="story-content">
+                        <h4>Cloud Migration Success</h4>
+                        <p>"Seamless cloud migration with zero downtime. Our data is now more secure and accessible than ever."</p>
+                        <div class="story-author">
+                            <span>Sarah Johnson</span>
+                            <span>CEO, CloudTech Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="story-slider-nav">
+                <button class="prev-story"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-story"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="recognized-by-section">
+        <div class="recognition-animation-area">
+            <img src="assets/img/logo.png" alt="MangoTree Technology Central Logo" class="central-orbit-logo">
+            <div class="orbiting-logo-container logo-orbiter-1">
+                <img src="assets/img/logo 1.png" alt="Partner 1" class="orbiting-logo">
+            </div>
+            <div class="orbiting-logo-container logo-orbiter-2">
+                <img src="assets/img/logo 2.png" alt="Partner 2" class="orbiting-logo">
+            </div>
+            <div class="orbiting-logo-container logo-orbiter-3">
+                <img src="assets/img/logo 3.png" alt="Partner 3" class="orbiting-logo">
+            </div>
+            <div class="orbiting-logo-container logo-orbiter-4">
+                <img src="assets/img/logo 4.png" alt="Partner 4" class="orbiting-logo">
+            </div>
+            <div class="orbiting-logo-container logo-orbiter-5">
+                <img src="assets/img/logo 5.png" alt="Partner 5" class="orbiting-logo">
+            </div>
+            <div class="orbiting-logo-container logo-orbiter-6">
+                <img src="assets/img/logo 6.png" alt="Partner 6" class="orbiting-logo">
+            </div>
+            <div class="orbiting-logo-container logo-orbiter-7">
+                <img src="assets/img/logo 7.png" alt="Partner 7" class="orbiting-logo">
+            </div>
+            <div class="orbiting-logo-container logo-orbiter-8">
+                <img src="assets/img/logo 8.png" alt="Partner 8" class="orbiting-logo">
+            </div>
+        </div>
+        <div class="recognized-content">
+            <h2 class="section-title">Recognized by The Best</h2>
+            <p class="section-subtitle">We're proud to be trusted by leading companies and organizations. Our commitment to excellence is reflected in our partnerships and accolades.</p>
+        </div>
+    </section>
+
+    <section class="signup-login-section" id="auth-section">
+        <div class="auth-container">
+            <div class="signup-area">
+                <h2 class="section-title">New Here? Sign Up!</h2>
+                <p class="section-subtitle">Create an account to get started with our services and offers.</p>
+                <form class="signup-form" id="signupForm">
+                    <div class="form-group">
+                        <label for="signupFullName">Full Name</label>
+                        <input type="text" id="signupFullName" name="signupFullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" name="signupEmail" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" name="signupPassword" placeholder="Choose a strong password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupConfirmPassword">Confirm Password</label>
+                        <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" placeholder="Re-enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-signup">Create Account</button>
+                    <div id="signup-message" class="form-message"></div>
+                </form>
+            </div>
+            <div class="login-prompt-area">
+                <h3 class="login-prompt-title">Already have an account?</h3>
+                <p class="login-prompt-text">Log in to access your dashboard and manage your services.</p>
+                <button class="btn btn-secondary btn-login-redirect" onclick="window.location.href='index.html'">Login Now</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column footer-logo-area">
+            <img src="assets/img/logo.png" alt="MangoTree Technology Logo" class="footer-logo">
+            <p class="footer-tagline">Empowering your digital future.</p> 
+        </div>
+        <div class="footer-column footer-address">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 1166 Sector 14 Dwarka,<br>New Delhi 110078, India</p>
+            <!-- Add email/phone if desired -->
+            <!-- <p><i class="fas fa-envelope"></i> info@mangotreetechnology.com</p> -->
+            <!-- <p><i class="fas fa-phone"></i> +91 12345 67890</p> -->
+        </div>
+        <div class="footer-column footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-bar">
+        <p>&copy; 2025 Mangotreetechnology. All rights reserved.</p>
+        <div class="footer-legal-links">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+
+<button id="scrollToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+<a href="https://api.whatsapp.com/send/?phone=919220607577&text=Hi+%2AMango+ Tree+Technology%2A%21+I+need+more+info+about+Mango+Tree+Technology+https%3A%2F%2Fmangotreetechnology.com%2F&type=phone_number&app_absent=0" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a> 

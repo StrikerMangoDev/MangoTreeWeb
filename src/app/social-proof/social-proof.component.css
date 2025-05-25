@@ -1,0 +1,493 @@
+/* Social Proof Page Styles */
+
+/* Hero Section */
+.social-hero-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 60px 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(118, 75, 162, 0.08);
+    text-align: center;
+}
+
+.social-hero-content h1 {
+    font-size: 3.2em;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.social-hero-content p {
+    font-size: 1.2em;
+    color: #555e68;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.success-metrics {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.metric-item {
+    text-align: center;
+}
+
+.metric-number {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #764ba2;
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.metric-label {
+    color: #555e68;
+    font-size: 1.1em;
+}
+
+/* Client Logos Section */
+.client-logos-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.client-logos-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    pointer-events: none;
+}
+
+.client-logos-section h2 {
+    font-size: 2.4em;
+    color: #2c3e50;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    position: relative;
+}
+
+.client-logos-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+}
+
+.logo-item {
+    padding: 25px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.logo-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    filter: none;
+}
+
+/* Specific styling for AWS logo */
+.logo-item img[alt="Client Logo 5"] {
+    width: 140px;
+    height: 80px;
+    padding: 10px;
+}
+
+.logo-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.logo-item:hover::before {
+    opacity: 1;
+}
+
+.logo-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.testimonials-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(118, 75, 162, 0.08);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(118, 75, 162, 0.12);
+}
+
+.testimonial-content {
+    margin-bottom: 30px;
+}
+
+.testimonial-content i {
+    font-size: 2em;
+    color: #764ba2;
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    font-size: 1.1em;
+    color: #555e68;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.author-info p {
+    color: #555e68;
+    font-size: 0.9em;
+}
+
+/* Success Stories Section */
+.success-stories-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 25px;
+}
+
+.success-stories-section h2 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.story-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(118, 75, 162, 0.08);
+    transition: all 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(118, 75, 162, 0.12);
+}
+
+.story-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover .story-image img {
+    transform: scale(1.05);
+}
+
+.story-content {
+    padding: 30px;
+}
+
+.story-content h3 {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.story-content p {
+    font-size: 1.1em;
+    color: #555e68;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.achievement-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.achievement-list li {
+    padding: 8px 0;
+    color: #495057;
+    font-size: 1.05em;
+    display: flex;
+    align-items: center;
+}
+
+.achievement-list li::before {
+    content: '✓';
+    color: #667eea;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.read-more {
+    color: #764ba2;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    color: #667eea;
+}
+
+/* CTA Section */
+.social-cta-section {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    padding: 100px 25px;
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+.social-cta-section .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-cta-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.social-cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.social-cta-section .cta-button {
+    background: white;
+    color: #764ba2;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-cta-section .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .social-hero-content h1 {
+        font-size: 2.8em;
+    }
+
+    .success-metrics {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-hero-content h1 {
+        font-size: 2.4em;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-number {
+        font-size: 2.4em;
+    }
+
+    .logo-item {
+        padding: 20px;
+    }
+
+    .logo-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Adjust AWS logo size for mobile */
+    .logo-item img[alt="Client Logo 5"] {
+        width: 120px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-hero-content h1 {
+        font-size: 2em;
+    }
+
+    .success-metrics {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .testimonial-card {
+        padding: 30px;
+    }
+
+    .social-cta-section .cta-button {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .logo-item {
+        padding: 15px;
+    }
+
+    .logo-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Further adjust AWS logo size for smaller screens */
+    .logo-item img[alt="Client Logo 5"] {
+        width: 100px;
+        height: 60px;
+    }
+
+    .client-logos-section h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+}
+
+/* Responsive Design for Logo Grid */
+@media (max-width: 1200px) {
+    .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 0 20px;
+    }
+} 

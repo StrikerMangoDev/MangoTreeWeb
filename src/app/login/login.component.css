@@ -1,0 +1,937 @@
+/* Modern Login Page Styles */
+:root {
+    --primary-color: #4F46E5;
+    --secondary-color: #6366F1;
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --white: #ffffff;
+    --error: #dc3545;
+    --success: #28a745;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+/* Enhanced Animated Background */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(118, 75, 162, 0.15) 0%, transparent 70%),
+        radial-gradient(circle at 80% 20%, rgba(102, 126, 234, 0.2) 0%, transparent 70%),
+        radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.15) 0%, transparent 70%),
+        radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.2) 0%, transparent 70%),
+        linear-gradient(45deg, #0a0a0a, #1a1a1a);
+    animation: backgroundAnimation 20s ease-in-out infinite alternate;
+    overflow: hidden;
+}
+
+/* Enhanced floating particles */
+.animated-background::before,
+.animated-background::after,
+.animated-background span {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.animated-background::before {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.1) 0%, rgba(118, 75, 162, 0.05) 50%, transparent 100%);
+    animation: floatParticle1 15s infinite;
+    top: 10%;
+    left: 10%;
+}
+
+.animated-background::after {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.1) 0%, rgba(102, 126, 234, 0.05) 50%, transparent 100%);
+    animation: floatParticle2 20s infinite;
+    top: 50%;
+    right: 15%;
+}
+
+/* Additional bubbles */
+.animated-background .bubble1,
+.animated-background .bubble2,
+.animated-background .bubble3,
+.animated-background .bubble4,
+.animated-background .bubble5 {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.animated-background .bubble1 {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.08) 0%, transparent 70%);
+    animation: floatBubble1 18s infinite;
+    top: 25%;
+    left: 30%;
+}
+
+.animated-background .bubble2 {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.08) 0%, transparent 70%);
+    animation: floatBubble2 25s infinite;
+    top: 60%;
+    left: 50%;
+}
+
+.animated-background .bubble3 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.06) 0%, transparent 70%);
+    animation: floatBubble3 22s infinite;
+    top: 40%;
+    left: 70%;
+}
+
+.animated-background .bubble4 {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.07) 0%, transparent 70%);
+    animation: floatBubble4 20s infinite;
+    top: 75%;
+    left: 20%;
+}
+
+.animated-background .bubble5 {
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.05) 0%, transparent 70%);
+    animation: floatBubble5 23s infinite;
+    top: 15%;
+    left: 80%;
+}
+
+@keyframes floatParticle1 {
+    0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    33% { transform: translate(100px, 100px) rotate(120deg) scale(1.1); }
+    66% { transform: translate(-50px, 200px) rotate(240deg) scale(0.9); }
+    100% { transform: translate(0, 0) rotate(360deg) scale(1); }
+}
+
+@keyframes floatParticle2 {
+    0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    33% { transform: translate(-150px, -80px) rotate(-120deg) scale(0.9); }
+    66% { transform: translate(100px, -150px) rotate(-240deg) scale(1.1); }
+    100% { transform: translate(0, 0) rotate(-360deg) scale(1); }
+}
+
+@keyframes floatBubble1 {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+    50% { transform: translate(-100px, -100px) scale(1.2); opacity: 0.6; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+}
+
+@keyframes floatBubble2 {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+    50% { transform: translate(120px, -80px) scale(0.8); opacity: 0.9; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+}
+
+@keyframes floatBubble3 {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+    50% { transform: translate(-80px, 100px) scale(1.1); opacity: 0.8; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+}
+
+@keyframes floatBubble4 {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+    50% { transform: translate(90px, 90px) scale(0.9); opacity: 0.9; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+}
+
+@keyframes floatBubble5 {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+    50% { transform: translate(-70px, -120px) scale(1.2); opacity: 0.6; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    min-height: auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+/* Glowing border effect */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+/* Logo Container */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Card Content */
+.card-content {
+    position: relative;
+    width: 100%;
+}
+
+.card-heading {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.card-heading small {
+    display: block;
+    font-size: 0.5em;
+    color: var(--text-light);
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/* Input Fields */
+.input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 45px;
+    border: 2px solid rgba(108, 117, 125, 0.2);
+    border-radius: 12px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.input-field:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    outline: none;
+}
+
+.input-label {
+    position: absolute;
+    left: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    top: -10px;
+    left: 15px;
+    font-size: 0.85em;
+    padding: 0 5px;
+    background: white;
+    color: var(--secondary-color);
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    font-size: 1.1em;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 1.1em;
+}
+
+.toggle-password:hover {
+    color: var(--secondary-color);
+}
+
+/* Remember Me Checkbox */
+.remember-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-light);
+    font-size: 0.95em;
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--text-light);
+    border-radius: 4px;
+    margin-right: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-container input:checked + .checkmark {
+    background: var(--gradient);
+    border-color: transparent;
+}
+
+.checkbox-container input:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.forgot-password {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Login Button */
+.action {
+    margin: 20px 0;
+}
+
+.action-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: var(--gradient);
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.action-button:active {
+    transform: translateY(0);
+}
+
+.action-button i {
+    transition: transform 0.3s ease;
+}
+
+.action-button:hover i {
+    transform: translateX(5px);
+}
+
+/* Sign Up Link */
+.card-info {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--text-light);
+}
+
+.signup-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Social Login */
+.social-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-login p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background: #ddd;
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid rgba(108, 117, 125, 0.2);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn.google { color: #DB4437; }
+.social-btn.github { color: #333; }
+.social-btn.linkedin { color: #0077B5; }
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Message Styles */
+.message-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.error-message, .success-message {
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    background-color: var(--error);
+}
+
+.success-message {
+    background-color: var(--success);
+}
+
+.error-message.show, .success-message.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 600px) {
+    .card {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .company-logo {
+        width: 120px;
+    }
+
+    .card-heading {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    .input-field {
+        padding: 10px 35px;
+    }
+
+    .social-buttons {
+        gap: 15px;
+    }
+
+    .social-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .company-logo {
+        width: 100px;
+    }
+
+    .card-heading {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-height: 800px) {
+    .card {
+        min-height: 520px;
+    }
+}
+
+/* Loading Animation */
+.action-button.loading {
+    position: relative;
+    color: transparent;
+}
+
+.action-button.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Additional particles */
+.animated-background .particle1, .animated-background .particle2,
+.animated-background .particle3, .animated-background .particle4,
+.animated-background .particle5, .animated-background .particle6,
+.animated-background .particle7, .animated-background .particle8,
+.animated-background .particle9, .animated-background .particle10,
+.animated-background .particle11, .animated-background .particle12,
+.animated-background .particle13, .animated-background .particle14,
+.animated-background .particle15, .animated-background .particle16,
+.animated-background .particle17, .animated-background .particle18,
+.animated-background .particle19, .animated-background .particle20 {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.animated-background .particle1 {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.06) 0%, transparent 70%);
+    animation: particleFloat1 19s infinite;
+    top: 85%;
+    left: 15%;
+}
+
+.animated-background .particle2 {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.07) 0%, transparent 70%);
+    animation: particleFloat2 21s infinite;
+    top: 35%;
+    left: 85%;
+}
+
+.animated-background .particle3 {
+    width: 95px;
+    height: 95px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.05) 0%, transparent 70%);
+    animation: particleFloat3 24s infinite;
+    top: 55%;
+    left: 40%;
+}
+
+.animated-background .particle4 {
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.08) 0%, transparent 70%);
+    animation: particleFloat4 17s infinite;
+    top: 20%;
+    left: 60%;
+}
+
+.animated-background .particle5 {
+    width: 110px;
+    height: 110px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.04) 0%, transparent 70%);
+    animation: particleFloat5 23s infinite;
+    top: 70%;
+    left: 75%;
+}
+
+.animated-background .particle6 {
+    width: 85px;
+    height: 85px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.06) 0%, transparent 70%);
+    animation: particleFloat6 20s infinite;
+    top: 45%;
+    left: 25%;
+}
+
+.animated-background .particle7 {
+    width: 75px;
+    height: 75px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.07) 0%, transparent 70%);
+    animation: particleFloat7 22s infinite;
+    top: 15%;
+    left: 45%;
+}
+
+.animated-background .particle8 {
+    width: 90px;
+    height: 90px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+    animation: particleFloat8 18s infinite;
+    top: 80%;
+    left: 90%;
+}
+
+.animated-background .particle9 {
+    width: 65px;
+    height: 65px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.08) 0%, transparent 70%);
+    animation: particleFloat9 25s infinite;
+    top: 30%;
+    left: 10%;
+}
+
+.animated-background .particle10 {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.04) 0%, transparent 70%);
+    animation: particleFloat10 21s infinite;
+    top: 60%;
+    left: 55%;
+}
+
+.animated-background .particle11 {
+    width: 55px;
+    height: 55px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.07) 0%, transparent 70%);
+    animation: particleFloat11 19s infinite;
+    top: 25%;
+    left: 70%;
+}
+
+.animated-background .particle12 {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.03) 0%, transparent 70%);
+    animation: particleFloat12 23s infinite;
+    top: 75%;
+    left: 35%;
+}
+
+.animated-background .particle13 {
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.06) 0%, transparent 70%);
+    animation: particleFloat13 20s infinite;
+    top: 40%;
+    left: 80%;
+}
+
+.animated-background .particle14 {
+    width: 85px;
+    height: 85px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+    animation: particleFloat14 22s infinite;
+    top: 90%;
+    left: 60%;
+}
+
+.animated-background .particle15 {
+    width: 95px;
+    height: 95px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.04) 0%, transparent 70%);
+    animation: particleFloat15 24s infinite;
+    top: 10%;
+    left: 25%;
+}
+
+.animated-background .particle16 {
+    width: 75px;
+    height: 75px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.07) 0%, transparent 70%);
+    animation: particleFloat16 18s infinite;
+    top: 50%;
+    left: 15%;
+}
+
+.animated-background .particle17 {
+    width: 110px;
+    height: 110px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.05) 0%, transparent 70%);
+    animation: particleFloat17 21s infinite;
+    top: 65%;
+    left: 85%;
+}
+
+.animated-background .particle18 {
+    width: 65px;
+    height: 65px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.06) 0%, transparent 70%);
+    animation: particleFloat18 23s infinite;
+    top: 35%;
+    left: 95%;
+}
+
+.animated-background .particle19 {
+    width: 90px;
+    height: 90px;
+    background: radial-gradient(circle at center, rgba(118, 75, 162, 0.07) 0%, transparent 70%);
+    animation: particleFloat19 20s infinite;
+    top: 85%;
+    left: 45%;
+}
+
+.animated-background .particle20 {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+    animation: particleFloat20 22s infinite;
+    top: 15%;
+    left: 75%;
+}
+
+/* Additional particle animations */
+@keyframes particleFloat1 {
+    0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.6; }
+    50% { transform: translate(-120px, 80px) rotate(180deg) scale(1.2); opacity: 0.8; }
+    100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.6; }
+}
+
+@keyframes particleFloat2 {
+    0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.7; }
+    50% { transform: translate(100px, -100px) rotate(-180deg) scale(0.8); opacity: 0.9; }
+    100% { transform: translate(0, 0) rotate(-360deg) scale(1); opacity: 0.7; }
+}
+
+@keyframes particleFloat3 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.5; }
+    50% { transform: translate(-80px, -120px) scale(1.1) rotate(180deg); opacity: 0.7; }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.5; }
+}
+
+@keyframes particleFloat4 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.8; }
+    50% { transform: translate(150px, 80px) scale(0.9) rotate(-180deg); opacity: 0.6; }
+    100% { transform: translate(0, 0) scale(1) rotate(-360deg); opacity: 0.8; }
+}
+
+@keyframes particleFloat5 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.6; }
+    50% { transform: translate(-100px, 100px) scale(1.2) rotate(180deg); opacity: 0.8; }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.6; }
+}
+
+@keyframes particleFloat6 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.7; }
+    50% { transform: translate(120px, -80px) scale(0.8) rotate(-180deg); opacity: 0.9; }
+    100% { transform: translate(0, 0) scale(1) rotate(-360deg); opacity: 0.7; }
+}
+
+@keyframes particleFloat7 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.5; }
+    50% { transform: translate(-90px, -90px) scale(1.1) rotate(180deg); opacity: 0.7; }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.5; }
+}
+
+@keyframes particleFloat8 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.8; }
+    50% { transform: translate(110px, 70px) scale(0.9) rotate(-180deg); opacity: 0.6; }
+    100% { transform: translate(0, 0) scale(1) rotate(-360deg); opacity: 0.8; }
+}
+
+@keyframes particleFloat9 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.6; }
+    50% { transform: translate(-70px, 110px) scale(1.2) rotate(180deg); opacity: 0.8; }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.6; }
+}
+
+@keyframes particleFloat10 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.7; }
+    50% { transform: translate(130px, -70px) scale(0.8) rotate(-180deg); opacity: 0.9; }
+    100% { transform: translate(0, 0) scale(1) rotate(-360deg); opacity: 0.7; }
+}
+
+@keyframes particleFloat11 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.5; }
+    50% { transform: translate(-110px, -80px) scale(1.1) rotate(180deg); opacity: 0.7; }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.5; }
+}
+
+@keyframes particleFloat12 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.8; }
+    50% { transform: translate(90px, 100px) scale(0.9) rotate(-180deg); opacity: 0.6; }
+    100% { transform: translate(0, 0) scale(1) rotate(-360deg); opacity: 0.8; }
+}
+
+@keyframes particleFloat13 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.6; }
+    50% { transform: translate(-80px, 90px) scale(1.2) rotate(180deg); opacity: 0.8; }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.6; }
+}
+
+@keyframes particleFloat14 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.7; }
+    50% { transform: translate(120px, -90px) scale(0.8) rotate(-180deg); opacity: 0.9; }
+    100% { transform: translate(0, 0) scale(1) rotate(-360deg); opacity: 0.7; }
+}
+
+@keyframes particleFloat15 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.5; }
+    50% { transform: translate(-100px, -100px) scale(1.1) rotate(180deg); opacity: 0.7; }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.5; }
+}
+
+@keyframes particleFloat16 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.8; }
+    50% { transform: translate(110px, 80px) scale(0.9) rotate(-180deg); opacity: 0.6; }
+    100% { transform: translate(0, 0) scale(1) rotate(-360deg); opacity: 0.8; }
+}
+
+@keyframes particleFloat17 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.6; }
+    50% { transform: translate(-90px, 110px) scale(1.2) rotate(180deg); opacity: 0.8; }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.6; }
+}
+
+@keyframes particleFloat18 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.7; }
+    50% { transform: translate(100px, -110px) scale(0.8) rotate(-180deg); opacity: 0.9; }
+    100% { transform: translate(0, 0) scale(1) rotate(-360deg); opacity: 0.7; }
+}
+
+@keyframes particleFloat19 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.5; }
+    50% { transform: translate(-120px, -70px) scale(1.1) rotate(180deg); opacity: 0.7; }
+    100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.5; }
+}
+
+@keyframes particleFloat20 {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.8; }
+    50% { transform: translate(80px, 120px) scale(0.9) rotate(-180deg); opacity: 0.6; }
+    100% { transform: translate(0, 0) scale(1) rotate(-360deg); opacity: 0.8; }
+} 

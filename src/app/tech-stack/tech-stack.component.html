@@ -1,0 +1,231 @@
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a routerLink="/">
+                <img src="assets/img/logo.png" alt="Company Logo">
+            </a>
+        </div>
+        <!-- New Central Navigation for Desktop -->
+        <ul class="desktop-nav-links">
+            <li><a routerLink="/services" routerLinkActive="active">Services</a></li> 
+            <li><a routerLink="/industries" routerLinkActive="active">Industry We Serve</a></li>
+            <li><a routerLink="/tech-stack" routerLinkActive="active">Tech Stack</a></li>
+            <li><a routerLink="/social-proof" routerLinkActive="active">Social Proof</a></li>
+        </ul>
+        <div class="header-right-controls">
+            <a routerLink="/contact"><button class="contact-us-btn">Contact Us</button></a>
+            <button class="hamburger-menu-toggle" id="hamburgerIcon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- Slide-Out Off-Canvas Menu -->
+<div class="offcanvas-menu">
+    <button class="offcanvas-close-btn">
+        <i class="fas fa-times"></i>
+    </button>
+    <ul class="offcanvas-nav-links">
+        <li><a routerLink="/home">Home</a></li>
+        
+        <!-- Solutions Dropdown -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                Solutions
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="offcanvas-dropdown">
+                <li><a href="#">IT Consulting</a></li>
+                <li><a href="#">Digital Transformation</a></li>
+                <li><a href="#">Cloud Solutions</a></li>
+                <li><a href="#">Custom Software</a></li>
+            </ul>
+        </li>
+
+        <!-- Companies Dropdown -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                Companies
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="offcanvas-dropdown">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Partners</a></li>
+            </ul>
+        </li>
+
+        <!-- Case Studies Dropdown -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                Case Studies
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="offcanvas-dropdown">
+                <li><a href="#">Success Stories</a></li>
+                <li><a href="#">Client Projects</a></li>
+                <li><a href="#">Industry Solutions</a></li>
+            </ul>
+        </li>
+
+        <!-- Blog Dropdown -->
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                Blog
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="offcanvas-dropdown">
+                <li><a href="#">Latest Posts</a></li>
+                <li><a href="#">Tech Insights</a></li>
+                <li><a href="#">Industry News</a></li>
+            </ul>
+        </li>
+
+        <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+</div>
+<div class="offcanvas-overlay"></div>
+
+<!-- Hero Section -->
+<section class="tech-hero-section">
+    <div class="tech-hero-content">
+        <h1>Our Technology Stack</h1>
+        <p>We leverage cutting-edge technologies to build robust, scalable, and innovative solutions for our clients.</p>
+    </div>
+</section>
+
+<!-- Technology Categories -->
+<section class="tech-categories">
+    <div class="tech-category">
+        <h2>Frontend Technologies</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                <h3>React</h3>
+                <p>Building dynamic and responsive user interfaces</p>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js">
+                <h3>Vue.js</h3>
+                <p>Creating interactive web applications</p>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular">
+                <h3>Angular</h3>
+                <p>Enterprise-grade web applications</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="tech-category">
+        <h2>Backend Technologies</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                <h3>Node.js</h3>
+                <p>Scalable server-side applications</p>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                <h3>Python</h3>
+                <p>AI, ML, and data processing solutions</p>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                <h3>Java</h3>
+                <p>Enterprise applications and microservices</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="tech-category">
+        <h2>Database & Cloud</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                <h3>MongoDB</h3>
+                <p>NoSQL database for flexible data storage</p>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                <h3>PostgreSQL</h3>
+                <p>Robust relational database solutions</p>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" style="filter: invert(20%) sepia(12%) saturate(1500%) hue-rotate(176deg) brightness(95%) contrast(90%);">
+                <h3>AWS</h3>
+                <p>Cloud infrastructure and services</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Process -->
+<section class="tech-process">
+    <h2>Our Technology Selection Process</h2>
+    <div class="process-steps">
+        <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Requirements Analysis</h3>
+            <p>We carefully analyze project requirements to choose the most suitable technologies.</p>
+        </div>
+        <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Performance Evaluation</h3>
+            <p>Technologies are evaluated based on performance, scalability, and security needs.</p>
+        </div>
+        <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Future-Proofing</h3>
+            <p>We select technologies that ensure long-term sustainability and growth.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="tech-cta-section">
+    <div class="cta-content">
+        <h2>Ready to Build with Cutting-Edge Tech?</h2>
+        <p>Let's discuss how our technology expertise can help bring your ideas to life.</p>
+        <button class="cta-button">Start Your Project</button>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column footer-logo-area">
+            <img src="assets/img/logo.png" alt="MangoTree Technology Logo" class="footer-logo">
+            <p class="footer-tagline">Empowering your digital future.</p> 
+        </div>
+        <div class="footer-column footer-address">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 1166 Sector 14 Dwarka,<br>New Delhi 110078, India</p>
+        </div>
+        <div class="footer-column footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-bar">
+        <p>&copy; 2025 Mangotreetechnology. All rights reserved.</p>
+        <div class="footer-legal-links">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+
+<button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+<a href="https://api.whatsapp.com/send/?phone=919220607577&text=Hi+%2AMango+ Tree+Technology%2A%21+I+need+more+info+about+Mango+Tree+Technology+https%3A%2F%2Fmangotreetechnology.com%2F&type=phone_number&app_absent=0" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>

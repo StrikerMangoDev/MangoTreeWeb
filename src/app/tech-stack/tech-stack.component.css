@@ -1,0 +1,271 @@
+/* Tech Stack Page Styles */
+
+/* Hero Section */
+.tech-hero-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 60px 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(118, 75, 162, 0.08);
+    text-align: center;
+}
+
+.tech-hero-content h1 {
+    font-size: 3.2em;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.tech-hero-content p {
+    font-size: 1.2em;
+    color: #555e68;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Technology Categories */
+.tech-categories {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 25px;
+}
+
+.tech-category {
+    margin-bottom: 80px;
+}
+
+.tech-category h2 {
+    font-size: 2.4em;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+
+.tech-category h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tech-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(118, 75, 162, 0.1);
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(118, 75, 162, 0.12);
+    border-color: #667eea;
+}
+
+.tech-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+/* Specific styling for AWS logo */
+.tech-card img[alt="AWS"] {
+    width: 120px;
+    height: 80px;
+    padding: 10px;
+}
+
+.tech-card:hover img {
+    transform: scale(1.1);
+}
+
+.tech-card h3 {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.tech-card p {
+    font-size: 1.1em;
+    color: #555e68;
+    line-height: 1.6;
+}
+
+/* Technology Process */
+.tech-process {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.tech-process h2 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.process-steps {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.process-step {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(118, 75, 162, 0.08);
+    transition: all 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(118, 75, 162, 0.12);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 auto 25px;
+}
+
+.process-step h3 {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.process-step p {
+    font-size: 1.1em;
+    color: #555e68;
+    line-height: 1.7;
+}
+
+/* CTA Section */
+.tech-cta-section {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    padding: 100px 25px;
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+.tech-cta-section .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tech-cta-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.tech-cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.tech-cta-section .cta-button {
+    background: white;
+    color: #764ba2;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tech-cta-section .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .tech-hero-content h1 {
+        font-size: 2.8em;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-hero-content h1 {
+        font-size: 2.4em;
+    }
+
+    .tech-process h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-hero-content h1 {
+        font-size: 2em;
+    }
+
+    .tech-card {
+        padding: 20px;
+    }
+
+    .tech-cta-section .cta-button {
+        width: 100%;
+        padding: 15px 20px;
+    }
+} 

@@ -1,72 +1,42 @@
-# IDEs and editors
-.idea/
-.vscode/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-
-# Node modules and dependencies
-node_modules/
-bower_components/
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
-dist/
-tmp/
-out-tsc/
+/dist
+/tmp
+/out-tsc
+/bazel-out
 
-# Angular build files
-/build/
-/coverage/
-/aot/
-/fesm*/ 
-bundles/
-*.js
-*.js.map
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-# OS-generated files
-.DS_Store
-Thumbs.db
-
-# Optional npm cache directory
-.npm/
-
-# Environment files (if using different environments)
-src/environments/environment*.ts
-
-# Angular CLI
-.angular/
-.angular-cache/
-.angular-config.json
-
-# Testing
-/karma-*.js
-/coverage/
-test-results.xml
-/junit.xml
-/tsconfig.spec.json
-
-# IDE specific settings
-*.code-workspace
-
-# TypeScript cache
-*.tsbuildinfo
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
 # Miscellaneous
-.eslintcache
-package-lock.json
-yarn.lock
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
 
-# Firebase or other deployment artifacts (if applicable)
-.firebase/
-functions/node_modules/
-
-# Output folders
-/.serverless/
-/functions/lib/
-/functions/coverage/
+# System files
+.DS_Store
+Thumbs.db
