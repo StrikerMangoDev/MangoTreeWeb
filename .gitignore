@@ -1,0 +1,72 @@
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Node modules and dependencies
+node_modules/
+bower_components/
+
+# Compiled output
+dist/
+tmp/
+out-tsc/
+
+# Angular build files
+/build/
+/coverage/
+/aot/
+/fesm*/ 
+bundles/
+*.js
+*.js.map
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Optional npm cache directory
+.npm/
+
+# Environment files (if using different environments)
+src/environments/environment*.ts
+
+# Angular CLI
+.angular/
+.angular-cache/
+.angular-config.json
+
+# Testing
+/karma-*.js
+/coverage/
+test-results.xml
+/junit.xml
+/tsconfig.spec.json
+
+# IDE specific settings
+*.code-workspace
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Miscellaneous
+.eslintcache
+package-lock.json
+yarn.lock
+
+# Firebase or other deployment artifacts (if applicable)
+.firebase/
+functions/node_modules/
+
+# Output folders
+/.serverless/
+/functions/lib/
+/functions/coverage/
